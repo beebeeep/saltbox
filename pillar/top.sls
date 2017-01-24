@@ -1,3 +1,4 @@
 testing:
   '*':
     - common
+    - sites
