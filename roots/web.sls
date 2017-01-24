@@ -15,6 +15,7 @@ nginx:
     - source: salt://files/nginx-site.conf
     - template: jinja
     - context:
+        site: {{site}}
         settings: {{settings}}
     - mode: 0644
     - user: root
