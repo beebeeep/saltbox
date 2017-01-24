@@ -20,4 +20,12 @@ nginx:
     - mode: 0644
     - user: root
     - group: root
+    - watch_in:
+      - service: nginx
+      - cmd: test_config
 {% endfor %}
+
+test_config:
+  cmd.wait:
+    name: nginx -t
+
