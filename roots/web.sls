@@ -27,5 +27,5 @@ nginx:
 
 test_config:
   cmd.wait:
-    name: nginx -t
+    - name: nginx -t
 
