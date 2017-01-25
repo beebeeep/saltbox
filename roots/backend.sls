@@ -35,6 +35,6 @@ ct-grabber:
     - mode: 0644
     - formatter: yaml
     - dataset:
-      db:
-        host: {{ pillar.get('dbs', 'localhost') }}
-        port: 27017
+        db:
+          host: {{ pillar.get('dbs', 'localhost') }}
+          port: 27017
