@@ -11,5 +11,5 @@ mongodb:
 /etc/mongodb.conf:
   file.replace:
     - pattern: bind_ip.*
-    - repl: bind_ip = {{ grain.get('ipv4')|join(', ') }}
+    - repl: bind_ip = {{ grains.get('ipv4')|join(', ') }}
 
