@@ -28,4 +28,13 @@ ct-grabber:
     - minute: '*/30'
     - require:
       - pkg: python-ct
+      - file: /etc/ct.yml
 
+/etc/ct.yml:
+  file.serialize:
+    - mode: 0644
+    - formatter: yaml
+    - dataset:
+      db:
+        host: {{ pillar.get('dbs', 'localhost') }}
+        port: 27017
