@@ -16,6 +16,11 @@ python-ct:
     - installed
     - require:
       - pkgrepo: cacus
+      - pip: pymongo
+
+pymongo:
+  pip:
+    - installed
 
 ct-grabber:
   cron.present:
@@ -23,3 +28,4 @@ ct-grabber:
     - minute: '*/30'
     - require:
       - pkg: python-ct
+
