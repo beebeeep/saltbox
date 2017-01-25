@@ -18,7 +18,7 @@ python-ct:
       - pkgrepo: cacus
       - pip: pymongo
 
-pymongo:
+pymongo1111:
   pip:
     - installed
 
